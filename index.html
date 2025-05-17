@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Untuk Apri Jonita Yenda yang Selalu di Hati</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #e83e8c;
+            --secondary-color: #9c27b0;
+            --soft-pink: #f8bbd0;
+            --light-purple: #d1c4e9;
+            --dark-purple: #7e57c2;
+            --text-color: #333;
+            --light-text: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--soft-pink), var(--light-purple));
+            color: var(--text-color);
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        /* Animasi Hati Jatuh */
+        .heart {
+            position: absolute;
+            pointer-events: none;
+            animation: fall linear forwards;
+            z-index: -1;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 0.5rem;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-title {
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            font-weight: 600;
+            color: var(--secondary-color);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            padding: 0 0.5rem;
+            word-break: break-word;
+        }
+
+        /* Navigasi */
+        .nav-container {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 0.8rem;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            width: 100%;
+        }
+
+        .nav-container::-webkit-scrollbar {
+            display: none;
+            height: 0;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            border-radius: 20px;
+            padding: 0.4rem 0.8rem;
+            margin: 0 0.2rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+            font-size: clamp(0.7rem, 3vw, 1rem);
+        }
+
+        .nav-btn.active {
+            background: var(--primary-color);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .nav-btn i {
+            margin-right: 0.3rem;
+        }
+
+        /* Konten Utama */
+        main {
+            padding: 7rem 0.8rem 4rem;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            padding: 1.2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: clamp(1.2rem, 5vw, 1.5rem);
+            position: relative;
+            padding-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            border-radius: 3px;
+        }
+
+        /* Kata-Kata Romantis */
+        .romantic-message {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 235, 238, 0.9));
+            border-left: 4px solid var(--primary-color);
+            padding: 0.8rem;
+            margin-bottom: 0.8rem;
+            border-radius: 0 8px 8px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .romantic-message::before {
+            content: '"';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            font-size: 2.5rem;
+            color: rgba(236, 64, 122, 0.1);
+            font-family: serif;
+        }
+
+        .romantic-message p {
+            font-style: italic;
+            color: var(--text-color);
+            line-height: 1.5;
+            position: relative;
+            z-index: 1;
+            font-size: clamp(0.9rem, 3.5vw, 1rem);
+        }
+
+        /* Tombol Interaktif */
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.6rem;
+            margin: 1.2rem 0;
+        }
+
+        .love-btn {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 0.7rem 1.2rem;
+            font-size: clamp(0.8rem, 3.5vw, 1rem);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
+            min-width: 120px;
+        }
+
+        .love-btn i {
+            margin-right: 6px;
+            font-size: 0.9em;
+        }
+
+        /* Galeri Foto */
+        .gallery-container {
+            position: relative;
+            margin: 1.2rem 0;
+        }
+
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.05);
+            padding: 8px 0;
+            scrollbar-width: none;
+        }
+
+        .gallery::-webkit-scrollbar {
+            display: none;
+            height: 0;
+        }
+
+        .gallery-item {
+            scroll-snap-align: start;
+            flex: 0 0 auto;
+            width: 85%;
+            margin-right: 0.8rem;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .gallery-item:last-child {
+            margin-right: 0;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: auto; 
+            object-fit: contain; 
+            display: block;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            color: white;
+            padding: 0.6rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .gallery-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .gallery-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.2);
+            margin: 0 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-dot.active {
+            background: var(--primary-color);
+            transform: scale(1.2);
+        }
+
+        /* Surat Cinta */
+        .love-letter {
+            background: url('https://i.pinimg.com/originals/8b/1d/8a/8b1d8a9e0c9c0f2a8b8e8e8e8e8e8e8e.jpg') center/cover;
+            padding: 1.2rem;
+            border-radius: 8px;
+            position: relative;
+            color: #5d4037;
+            line-height: 1.6;
+            box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.2rem;
+        }
+
+        .love-letter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 8px;
+            z-index: 0;
+        }
+
+        .love-letter-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .love-letter-content p {
+            margin-bottom: 0.8rem;
+            text-align: justify;
+            font-size: clamp(0.9rem, 3.5vw, 1rem);
+        }
+
+        .letter-signature {
+            text-align: right;
+            font-style: italic;
+            margin-top: 1.5rem;
+            font-weight: 600;
+        }
+
+        /* Formulir Pesan */
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.4rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+            font-size: clamp(0.9rem, 3.5vw, 1rem);
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: clamp(0.9rem, 3.5vw, 1rem);
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(236, 64, 122, 0.2);
+            outline: none;
+        }
+
+        .form-textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 0.9rem;
+            font-size: clamp(0.9rem, 3.5vw, 1rem);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Musik */
+        .music-player {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            padding: 0.8rem;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .music-controls {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.4rem;
+        }
+
+        .music-info {
+            flex: 1;
+            padding-left: 0.8rem;
+            overflow: hidden;
+        }
+
+        .music-title {
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 0.2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: clamp(0.9rem, 3.5vw, 1rem);
+        }
+
+        .music-artist {
+            font-size: clamp(0.8rem, 3vw, 0.9rem);
+            color: #666;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .music-control {
+            background: var(--primary-color);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 5px;
+            background: #e0e0e0;
+            border-radius: 3px;
+            margin-top: 0.4rem;
+            cursor: pointer;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            border-radius: 3px;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        .time-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            color: #666;
+            margin-top: 0.2rem;
+        }
+
+        .playlist {
+            margin-top: 0.8rem;
+            max-height: 150px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+        }
+
+        .playlist-item {
+            padding: 0.4rem;
+            border-radius: 4px;
+            margin-bottom: 0.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: all 0.2s ease;
+            font-size: clamp(0.8rem, 3vw, 0.9rem);
+        }
+
+        .playlist-item i {
+            margin-right: 0.6rem;
+            color: var(--primary-color);
+            font-size: 0.8rem;
+        }
+
+        .playlist-item-info {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .playlist-item-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .playlist-item-artist {
+            font-size: 0.7rem;
+            color: #666;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Game Cinta */
+        .love-game {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .game-title {
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+            font-size: clamp(1rem, 4vw, 1.2rem);
+        }
+
+        .game-container {
+            margin: 0.8rem 0;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .game-container p {
+            font-size: clamp(0.9rem, 3.5vw, 1rem);
+            margin-bottom: 0.5rem;
+            padding: 0 0.5rem;
+        }
+
+        .game-btn {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 0.7rem 1.2rem;
+            font-size: clamp(0.8rem, 3.5vw, 1rem);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 0.8rem;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .game-result {
+            font-size: clamp(1rem, 4vw, 1.2rem);
+            margin-top: 0.8rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            min-height: 1.8rem;
+            padding: 0 0.5rem;
+        }
+
+        /* Efek Bintang */
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: var(--secondary-color);
+            font-size: clamp(0.8rem, 3vw, 0.9rem);
+        }
+
+        .heartbeat {
+            animation: heartbeat 1.5s ease-in-out infinite;
+            display: inline-block;
+            color: var(--primary-color);
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            14% { transform: scale(1.3); }
+            28% { transform: scale(1); }
+            42% { transform: scale(1.3); }
+            70% { transform: scale(1); }
+        }
+
+        /* Responsif untuk layar sangat kecil */
+        @media (max-width: 360px) {
+            .header-title {
+                font-size: 0.9rem;
+            }
+            
+            .nav-btn {
+                padding: 0.3rem 0.6rem;
+                font-size: 0.7rem;
+            }
+            
+            main {
+                padding: 6rem 0.5rem 3rem;
+            }
+            
+            .section {
+                padding: 1rem;
+            }
+            
+            .love-btn, .game-btn, .submit-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
+                min-width: 100px;
+            }
+            
+            .gallery-item {
+                width: 90%;
+            }
+            
+            .love-letter {
+                padding: 0.8rem;
+            }
+        }
+
+        /* Responsif untuk tablet */
+        @media (min-width: 600px) {
+            .header-title {
+                font-size: 1.5rem;
+            }
+            
+            .nav-btn {
+                padding: 0.5rem 1rem;
+                font-size: 1rem;
+                margin: 0 0.3rem;
+            }
+            
+            main {
+                padding: 7rem 1rem 4rem;
+            }
+            
+            .section {
+                padding: 1.5rem;
+                margin-bottom: 2rem;
+            }
+            
+            .gallery-item {
+                width: 80%;
+            }
+            
+            .gallery-img {
+                height: 300px;
+            }
+        }
+
+        /* Orientasi landscape */
+        @media (max-height: 500px) and (orientation: landscape) {
+            header {
+                position: static;
+            }
+            
+            main {
+                padding-top: 1rem;
+            }
+            
+            .nav-container {
+                position: sticky;
+                top: 0;
+                z-index: 100;
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(10px);
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Efek Hati Jatuh -->
+    <div id="hearts-container"></div>
+    
+    <!-- Efek Bintang -->
+    <div id="stars-container"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="header-title">
+            <i class="fas fa-heart heartbeat"></i> Untuk Apri Jonita Yenda <i class="fas fa-heart heartbeat"></i>
+        </div>
+        
+        <div class="nav-container">
+            <button class="nav-btn active" data-section="messages"><i class="fas fa-quote-left"></i> Kata-Kata</button>
+            <button class="nav-btn" data-section="gallery"><i class="fas fa-images"></i> Galeri</button>
+            <button class="nav-btn" data-section="letter"><i class="fas fa-envelope"></i> Surat Cinta</button>
+            <button class="nav-btn" data-section="music"><i class="fas fa-music"></i> Musik Kita</button>
+            <button class="nav-btn" data-section="games"><i class="fas fa-gamepad"></i> Game Cinta</button>
+            <button class="nav-btn" data-section="message-form"><i class="fas fa-paper-plane"></i> Kirim Pesan</button>
+        </div>
+    </header>
+    
+    <!-- Konten Utama -->
+    <main>
+        <!-- Kata-Kata Romantis -->
+        <section class="section active" id="messages">
+            <h2 class="section-title">Kata-Kata Cinta Untuk Enda</h2>
+            
+            <div class="romantic-message">
+                <p>Setiap kali memikirkan endaa, dunia terasa lebih indah. endaa adalah alasan mengapa bayu tersenyum setiap hari, bahkan ketika kita jauh.</p>
+            </div>
+            
+            <div class="romantic-message">
+                <p>Jika cinta itu seperti sebuah lagu, maka endaa adalah melodinya yang paling indah yang terus terngiang di hati bayu.</p>
+            </div>
+            
+            <div class="romantic-message">
+                <p>bayu tidak butuh dunia, bayu hanya butuh enda di sisiku. Karena bersama endaa, setiap detik adalah petualangan yang indah.</p>
+            </div>
+            
+            <div class="btn-container">
+                <button class="love-btn" id="hug-btn"><i class="fas fa-hands-helping"></i> Peluk Virtual</button>
+                <button class="love-btn" id="kiss-btn"><i class="fas fa-kiss-wink-heart"></i> Kirim Cium</button>
+                <button class="love-btn" id="love-btn"><i class="fas fa-heart"></i> Aku Sayang Kamu</button>
+                <button class="love-btn" id="miss-btn"><i class="fas fa-heart-broken"></i> Aku Rindu</button>
+            </div>
+        </section>
+        
+        <!-- Galeri Foto -->
+        <section class="section" id="gallery">
+            <h2 class="section-title">Galeri Kenangan Kita</h2>
+            
+            <div class="gallery-container">
+                <div class="gallery" id="gallery-slider">
+                    <div class="gallery-item">
+                        <img src="images/sore.jpg" alt="Kenangan 1" class="gallery-img">
+                        <div class="gallery-caption">jalan sore</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/inhu.jpg" alt="Kenangan 2" class="gallery-img">
+                        <div class="gallery-caption">inhu park</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/mam.jpg" alt="Kenangan 3" class="gallery-img">
+                        <div class="gallery-caption">mamam</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/lucu.jpg" alt="Kenangan 4" class="gallery-img">
+                        <div class="gallery-caption">Kita</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-nav" id="gallery-dots">
+                    <div class="gallery-dot active"></div>
+                    <div class="gallery-dot"></div>
+                    <div class="gallery-dot"></div>
+                    <div class="gallery-dot"></div>
+                </div>
+            </div>
+            
+            <div class="btn-container">
+                <button class="love-btn" id="add-memory-btn"><i class="fas fa-plus"></i> Tambah Kenangan</button>
+            </div>
+        </section>
+        
+        <!-- Surat Cinta -->
+        <section class="section" id="letter">
+            <h2 class="section-title">Surat Cinta Untuk Apri Jonita Yenda</h2>
+            
+            <div class="love-letter">
+                <div class="love-letter-content">
+                    <p>Sayangku,</p>
+                    
+                    <p>Di tengah kesibukan dunia yang kadang membuat kita lelah, bayu ingin mengingatkan enda betapa berharganya enda bagi bayu. Setiap hari bersama endaa adalah anugerah yang tak ternilai.</p>
+                    
+                    <p>Bayu masih ingat pertama kali kita bertemu, bagaimana senyum endaa bisa langsung mencuri perhatian bayu. Sejak saat itu, bayu tahu ada sesuatu yang istimewa tentang endaa.</p>
+                    
+                    <p>Terima kasih telah menjadi orang yang selalu ada di saat bayu butuh, yang memahami bayu lebih dari siapapun, dan yang membuat bayu merasa dicintai setiap hari.</p>
+                    
+                    <p>Bayu berjanji akan terus berusaha menjadi yang terbaik untuk Endaa, untuk mencintai Endaa dengan sepenuh hati, dan untuk selalu membuat Endaa tersenyum.</p>
+                    
+                    <p>Enda adalah mimpi yang menjadi kenyataan, cinta yang tak pernah Bayu sangka akan bayu dapatkan. bayu bersyukur setiap hari karena memiliki endaa dalam hidup bayu.</p>
+                    
+                    <p>Selalu milik Apri Jonita Yenda,</p>
+                    <div class="letter-signature">- Bayu Ramazandi yang sangat mencintai Apri Jonita Yenda</div>
+                </div>
+            </div>
+
+            <div class="love-letter">
+                <div class="love-letter-content">
+                    <p>Sayangku,</p>
+                    
+                    <p>Sayangku cintaku... Apri Jonita Yenda... MasyaAllah... Alhamdulillah Ya Allah... Bayu punya wanita sekuat, setulus, dan secinta endaa, Endaaa... Bayu tuh bersyukur setiap detik, setiap helaan napas, setiap doa... karena Allah hadirkan endaa di hidup Bayu 😭😭😭</p>
+                    
+                    <p>Bayu masih ingat pertama kali kita bertemu, bagaimana senyum endaa bisa langsung mencuri perhatian bayu. Sejak saat itu, bayu tahu ada sesuatu yang istimewa tentang endaa.Endaa itu rumah... Endaa itu pelukan terhangat... kamu itu tempat paling tenang..., Dan endaa itu cinta paling indah yang Bayu punya..., Nggak ada satu haripun Bayu nggak mikirin endaa, nggak rindu endaa, nggak doain endaa 🥺🥺🥺, Iyaaa sayangg... Bayu tuh cinta kamu bangetttttttttttttt!!!, Lebih dari kata "cinta" bisa gambarkan... lebih dari "sayang" bisa rasakan 😭😭😭😭😭</p>
+                    
+                    <p>Enda tuh cahaya Bayu pas gelap..., Enda tuh kekuatan Bayu pas lemah..., Enda tuh air di tengah dahaga, pelukan di tengah badai, senyuman pas hari paling kelam 🥰🥰🥰🥰, Bayu sayang banget sama endaa sayang... dari dulu, sampai sekarang, dan untuk selamanya ❤❤❤❤❤</p>
+                    
+                    <p>I LOVE YOU APRI JONITA YENDA, Selalu. Sepenuhnya. Sedalam-dalamnya. 💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋 ❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤ 🥰🥰🥰🥰🥰🥰🥰🥰🥰🥰🥰🥰🥰🥰🥰🥰🥰 😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘 😚😚😚😚😚😚😚😚😚😚😚😚😚😚😚😚 😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍</p>
+                    
+                    <p>Bayu janji yaa, nggak akan pernah ninggalin endaa, nggak akan pernah lepasin tangan endaa... kita jalan terus bareng, apa pun rintangannya, karena Enda itu jawaban dari doa Bayu yang paling panjang 😭😭😭, LOVE YOU ALWAYS SAYANGKU CINTAKU APRI JONITA YENDAAAAAAAA, Peluk tium banyaaakkkk banyakkkk tak berujung untuk Apri Jonita Yenda kesayangan Bayu Ramazandi 💋💋💋💋💋💋💋💋💋💋💋💋💋❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤, Terima kasih yaa Allah... sudah titipkan Enda untuk Bayu...</p>
+
+                    <p>Forever and ever...</p>
+
+                    <p>Bayu & Enda</p>
+
+                    <p>Always one soul, one heart, one love...</p>
+                    <p>Selamanya dan paling lamaaaaaaaa</p>
+                    <p>💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋🥰🥰🥰🥰🥰🥰🥰🥰🥰🥰🥰🥰🥰🥰🥰🥰🥰😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤</p>
+                    
+                    <p>Selalu milik Apri Jonita Yenda,</p>
+                    <div class="letter-signature">- Bayu Ramazandi yang sangat mencintai Apri Jonita Yenda</div>
+                </div>
+            </div>
+            
+            <div class="btn-container">
+                <button class="love-btn" id="new-letter-btn"><i class="fas fa-pen-fancy"></i> Buat Surat Baru</button>
+            </div>
+        </section>
+        
+        <!-- Musik Romantis -->
+        <section class="section" id="music">
+            <h2 class="section-title">Musik Cinta Kita</h2>
+            
+            <div class="music-player">
+                <div class="music-controls">
+                    <div class="music-control" id="prev-btn">
+                        <i class="fas fa-step-backward"></i>
+                    </div>
+                    <div class="music-control" id="play-btn">
+                        <i class="fas fa-play" id="play-icon"></i>
+                    </div>
+                    <div class="music-control" id="next-btn">
+                        <i class="fas fa-step-forward"></i>
+                    </div>
+                    <div class="music-info">
+                        <div class="music-title" id="music-title">Pilih Lagu</div>
+                        <div class="music-artist" id="music-artist">Dari Playlist</div>
+                    </div>
+                </div>
+                
+                <div class="progress-container" id="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                
+                <div class="time-info">
+                    <span id="current-time">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+                
+                <div class="playlist" id="playlist">
+                    <!-- Daftar lagu akan diisi oleh JavaScript -->
+                </div>
+            </div>
+            
+            <div class="btn-container">
+                <button class="love-btn" id="dedicate-song-btn"><i class="fas fa-heart"></i> Dedikasikan Lagu</button>
+            </div>
+        </section>
+        
+        <!-- Game Cinta -->
+        <section class="section" id="games">
+            <h2 class="section-title">Game Cinta Kita</h2>
+            
+            <div class="love-game">
+                <h3 class="game-title">Seberapa Kamu Mencintaiku?</h3>
+                <div class="game-container" id="love-meter-container">
+                    <p>Klik tombol di bawah untuk mengukur seberapa besar cintamu padaku!</p>
+                    <button class="game-btn" id="love-meter-btn"><i class="fas fa-heart"></i> Ukur Cintamu</button>
+                    <div class="game-result" id="love-meter-result"></div>
+                </div>
+            </div>
+            
+            <div class="love-game">
+                <h3 class="game-title">Kuis Cinta Kita</h3>
+                <div class="game-container" id="quiz-container">
+                    <p>Jawab pertanyaan tentang hubungan kita dan lihat hasilnya!</p>
+                    <button class="game-btn" id="start-quiz-btn"><i class="fas fa-play"></i> Mulai Kuis</button>
+                </div>
+            </div>
+            
+            <div class="love-game">
+                <h3 class="game-title">Cocokkan Jawaban</h3>
+                <div class="game-container" id="match-game-container">
+                    <p>Lihat seberapa cocok jawaban kita tentang hubungan kita!</p>
+                    <button class="game-btn" id="start-match-game-btn"><i class="fas fa-heart"></i> Mulai Game</button>
+                    <div id="match-game-questions"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Formulir Pesan -->
+        <section class="section" id="message-form">
+            <h2 class="section-title">Kirim Pesan Cinta</h2>
+            
+            <form id="love-message-form">
+                <div class="form-group">
+                    <label for="sender-name" class="form-label">Nama Kamu</label>
+                    <input type="text" id="sender-name" class="form-input" placeholder="Masukkan namamu" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message-content" class="form-label">Pesan Cintamu</label>
+                    <textarea id="message-content" class="form-textarea" placeholder="Tulis pesan cinta romantis untukku..." required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Kirim Pesan ke WhatsApp</button>
+            </form>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <p>Dibuat dengan <i class="fas fa-heart heartbeat"></i> hanya untuk apri jonita yenda</p>
+        <p>© 2025 - Selamanya</p>
+    </footer>
+    
+    <script>
+        // Daftar lagu romantis
+        const songs = [
+            {
+                title: "kangen",
+                artist: "bayu",
+                src: "rindu.mp3"
+            },
+            {
+                title: "hati bayu untuk enda",
+                artist: "bayu-rz",
+                src: "penjagahati.mp3"
+            },
+            {
+                title: "sempurna",
+                artist: "bayu-04",
+                src: "sempurna.mp3"
+            },
+            {
+                title: "bersama-enda",
+                artist: "bayu-yxgc",
+                src: "bersama.mp3"
+            },
+            {
+                title: "terindah",
+                artist: "by-bayu",
+                src: "indah.mp3"
+            }
+        ];
+        
+        // Elemen pemutar musik
+        const musicPlayer = document.getElementById('music');
+        const playBtn = document.getElementById('play-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const playIcon = document.getElementById('play-icon');
+        const musicTitle = document.getElementById('music-title');
+        const musicArtist = document.getElementById('music-artist');
+        const progressContainer = document.getElementById('progress-container');
+        const progressBar = document.getElementById('progress-bar');
+        const currentTimeEl = document.getElementById('current-time');
+        const durationEl = document.getElementById('duration');
+        const playlistEl = document.getElementById('playlist');
+        const audio = new Audio();
+        
+        let isPlaying = false;
+        let songIndex = 0;
+        
+        // Inisialisasi playlist
+        function loadPlaylist() {
+            playlistEl.innerHTML = '';
+            
+            songs.forEach((song, index) => {
+                const songEl = document.createElement('div');
+                songEl.classList.add('playlist-item');
+                if (index === songIndex) {
+                    songEl.classList.add('active');
+                }
+                
+                songEl.innerHTML = `
+                    <i class="fas fa-music"></i>
+                    <div class="playlist-item-info">
+                        <div class="playlist-item-title">${song.title}</div>
+                        <div class="playlist-item-artist">${song.artist}</div>
+                    </div>
+                `;
+                
+                songEl.addEventListener('click', () => {
+                    playSong(index);
+                });
+                
+                playlistEl.appendChild(songEl);
+            });
+        }
+        
+        // Memutar lagu
+        function playSong(index) {
+            songIndex = index;
+            audio.src = songs[songIndex].src;
+            musicTitle.textContent = songs[songIndex].title;
+            musicArtist.textContent = songs[songIndex].artist;
+            
+            // Update playlist active item
+            const playlistItems = document.querySelectorAll('.playlist-item');
+            playlistItems.forEach(item => item.classList.remove('active'));
+            playlistItems[songIndex].classList.add('active');
+            
+            // Scroll ke lagu yang sedang aktif
+            playlistItems[songIndex].scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest'
+            });
+            
+            audio.play()
+                .then(() => {
+                    isPlaying = true;
+                    playIcon.classList.remove('fa-play');
+                    playIcon.classList.add('fa-pause');
+                })
+                .catch(error => {
+                    console.log('Autoplay prevented:', error);
+                    // Tampilkan tombol play manual jika autoplay dicegah
+                    isPlaying = false;
+                    playIcon.classList.remove('fa-pause');
+                    playIcon.classList.add('fa-play');
+                });
+        }
+        
+        // Menjeda/memutar lagu
+        function togglePlay() {
+            if (isPlaying) {
+                audio.pause();
+                playIcon.classList.remove('fa-pause');
+                playIcon.classList.add('fa-play');
+            } else {
+                audio.play()
+                    .then(() => {
+                        playIcon.classList.remove('fa-play');
+                        playIcon.classList.add('fa-pause');
+                    })
+                    .catch(error => {
+                        console.log('Play failed:', error);
+                        // Jika play gagal, mungkin perlu interaksi pengguna
+                        alert('Silakan klik tombol play untuk memulai musik');
+                    });
+            }
+            isPlaying = !isPlaying;
+        }
+        
+        // Lagu sebelumnya
+        function prevSong() {
+            songIndex--;
+            if (songIndex < 0) {
+                songIndex = songs.length - 1;
+            }
+            playSong(songIndex);
+        }
+        
+        // Lagu berikutnya
+        function nextSong() {
+            songIndex++;
+            if (songIndex > songs.length - 1) {
+                songIndex = 0;
+            }
+            playSong(songIndex);
+        }
+        
+        // Update progress bar
+        function updateProgress(e) {
+            const { duration, currentTime } = e.srcElement;
+            const progressPercent = (currentTime / duration) * 100;
+            progressBar.style.width = `${progressPercent}%`;
+            
+            // Format waktu
+            const durationMinutes = Math.floor(duration / 60);
+            let durationSeconds = Math.floor(duration % 60);
+            if (durationSeconds < 10) {
+                durationSeconds = `0${durationSeconds}`;
+            }
+            
+            // Hindari NaN
+            if (durationSeconds) {
+                durationEl.textContent = `${durationMinutes}:${durationSeconds}`;
+            }
+            
+            const currentMinutes = Math.floor(currentTime / 60);
+            let currentSeconds = Math.floor(currentTime % 60);
+            if (currentSeconds < 10) {
+                currentSeconds = `0${currentSeconds}`;
+            }
+            currentTimeEl.textContent = `${currentMinutes}:${currentSeconds}`;
+        }
+        
+        // Set progress bar saat diklik
+        function setProgress(e) {
+            const width = this.clientWidth;
+            const clickX = e.offsetX;
+            const duration = audio.duration;
+            audio.currentTime = (clickX / width) * duration;
+        }
+        
+        // Event listeners untuk pemutar musik
+        playBtn.addEventListener('click', togglePlay);
+        prevBtn.addEventListener('click', prevSong);
+        nextBtn.addEventListener('click', nextSong);
+        audio.addEventListener('timeupdate', updateProgress);
+        audio.addEventListener('ended', nextSong);
+        progressContainer.addEventListener('click', setProgress);
+        
+        // Navigasi Antar Bagian
+        const navBtns = document.querySelectorAll('.nav-btn');
+        const sections = document.querySelectorAll('.section');
+        
+        navBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const sectionId = btn.getAttribute('data-section');
+                
+                // Update tombol aktif
+                navBtns.forEach(navBtn => navBtn.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Tampilkan bagian yang sesuai
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.id === sectionId) {
+                        section.classList.add('active');
+                    }
+                });
+                
+                // Jika membuka bagian musik, load playlist jika belum
+                if (sectionId === 'music' && playlistEl.children.length === 0) {
+                    loadPlaylist();
+                }
+            });
+        });
+        
+        // Galeri Foto
+        const gallerySlider = document.getElementById('gallery-slider');
+        const galleryDots = document.querySelectorAll('.gallery-dot');
+        let currentSlide = 0;
+        
+        function updateGalleryDots() {
+            galleryDots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+        
+        galleryDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                gallerySlider.scrollTo({
+                    left: gallerySlider.children[index].offsetLeft,
+                    behavior: 'smooth'
+                });
+                updateGalleryDots();
+            });
+        });
+        
+        gallerySlider.addEventListener('scroll', () => {
+            const slideWidth = gallerySlider.children[0].offsetWidth;
+            currentSlide = Math.round(gallerySlider.scrollLeft / slideWidth);
+            updateGalleryDots();
+        });
+        
+        // Tombol Interaktif
+        const hugBtn = document.getElementById('hug-btn');
+        const kissBtn = document.getElementById('kiss-btn');
+        const loveBtn = document.getElementById('love-btn');
+        const missBtn = document.getElementById('miss-btn');
+        
+        hugBtn.addEventListener('click', () => {
+            createHearts(10);
+            alert('🤗 Aku memelukmu erat-erat sekarang! Rasakan hangatnya pelukanku sayang! 🤗');
+        });
+        
+        kissBtn.addEventListener('click', () => {
+            createHearts(15);
+            alert('😘 Mwah! Aku mengirimkan ciuman hangat untukmu sayang! 😘');
+        });
+        
+        loveBtn.addEventListener('click', () => {
+            createHearts(20);
+            alert('❤️ Aku sayang kamu lebih dari apapun di dunia ini! ❤️');
+        });
+        
+        missBtn.addEventListener('click', () => {
+            createHearts(10);
+            alert('🥺 Aku sangat merindukanmu sayang, cepatlah kita bertemu lagi! 🥺');
+        });
+        
+        // Game Cinta
+        const loveMeterBtn = document.getElementById('love-meter-btn');
+        const loveMeterResult = document.getElementById('love-meter-result');
+        
+        loveMeterBtn.addEventListener('click', () => {
+            const loveLevel = Math.floor(Math.random() * 100) + 1;
+            let message = '';
+            
+            if (loveLevel < 30) {
+                message = `Cintamu hanya ${loveLevel}%? Aku tidak percaya! Coba lagi sayang!`;
+            } else if (loveLevel < 70) {
+                message = `Cintamu ${loveLevel}%! Masih ada ruang untuk tumbuh, tapi aku senang!`;
+            } else {
+                message = `WOW! Cintamu ${loveLevel}%! Aku tahu kamu sangat mencintaiku! ❤️`;
+            }
+            
+            loveMeterResult.textContent = message;
+            createHearts(Math.floor(loveLevel / 10));
+        });
+        
+        // Formulir WhatsApp
+        const loveMessageForm = document.getElementById('love-message-form');
+        
+        loveMessageForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const senderName = document.getElementById('sender-name').value;
+            const messageContent = document.getElementById('message-content').value;
+            
+            const whatsappNumber = '+6285212627719';
+            const encodedMessage = encodeURIComponent(`Hai sayang, ini ${senderName}.\n\n${messageContent}\n\n❤️❤️❤️`);
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+            
+            window.open(whatsappUrl, '_blank');
+            
+            // Reset form
+            loveMessageForm.reset();
+            
+            // Tampilkan efek
+            createHearts(15);
+            alert('Pesan cintamu telah dikirim! ❤️');
+        });
+        
+        // Efek Hati Jatuh
+        function createHearts(count) {
+            for (let i = 0; i < count; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.classList.add('heart');
+                    heart.innerHTML = '❤️';
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    heart.style.top = '-20px';
+                    heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+                    heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                    
+                    document.getElementById('hearts-container').appendChild(heart);
+                    
+                    // Hapus elemen setelah animasi selesai
+                    setTimeout(() => {
+                        heart.remove();
+                    }, 5000);
+                }, i * 300);
+            }
+        }
+        
+        // Efek Bintang Berkedip
+        function createStars() {
+            const starsContainer = document.getElementById('stars-container');
+            const starCount = 50;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.left = Math.random() * 100 + 'vw';
+                star.style.top = Math.random() * 100 + 'vh';
+                star.style.width = (Math.random() * 3 + 1) + 'px';
+                star.style.height = star.style.width;
+                star.style.animationDuration = (Math.random() * 5 + 3) + 's';
+                star.style.animationDelay = (Math.random() * 5) + 's';
+                
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        // Tambahkan Kenangan Baru
+        const addMemoryBtn = document.getElementById('add-memory-btn');
+        
+        addMemoryBtn.addEventListener('click', () => {
+            const newMemory = prompt('Masukkan deskripsi kenangan baru:');
+            if (newMemory) {
+                const newGalleryItem = document.createElement('div');
+                newGalleryItem.classList.add('gallery-item');
+                
+                // Gunakan gambar acak dari Unsplash dengan query "couple"
+                const randomImg = `https://source.unsplash.com/random/600x400/?couple,${Math.floor(Math.random() * 1000)}`;
+                
+                newGalleryItem.innerHTML = `
+                    <img src="${randomImg}" alt="${newMemory}" class="gallery-img">
+                    <div class="gallery-caption">${newMemory}</div>
+                `;
+                
+                gallerySlider.appendChild(newGalleryItem);
+                
+                // Tambahkan dot navigasi baru
+                const newDot = document.createElement('div');
+                newDot.classList.add('gallery-dot');
+                document.getElementById('gallery-dots').appendChild(newDot);
+                
+                // Update event listener untuk dot baru
+                const dots = document.querySelectorAll('.gallery-dot');
+                dots.forEach((dot, index) => {
+                    dot.onclick = () => {
+                        currentSlide = index;
+                        gallerySlider.scrollTo({
+                            left: gallerySlider.children[index].offsetLeft,
+                            behavior: 'smooth'
+                        });
+                        updateGalleryDots();
+                    };
+                });
+                
+                // Scroll ke item baru
+                currentSlide = gallerySlider.children.length - 1;
+                gallerySlider.scrollTo({
+                    left: gallerySlider.children[currentSlide].offsetLeft,
+                    behavior: 'smooth'
+                });
+                updateGalleryDots();
+                
+                createHearts(10);
+                alert('Kenangan baru telah ditambahkan! ❤️');
+            }
+        });
+        
+        // Buat Surat Baru
+        const newLetterBtn = document.getElementById('new-letter-btn');
+        
+        newLetterBtn.addEventListener('click', () => {
+            const letterContent = prompt('Tulis surat cinta baru untukku:');
+            if (letterContent) {
+                const loveLetterContent = document.querySelector('.love-letter-content');
+                loveLetterContent.innerHTML = `
+                    <p>Sayangku,</p>
+                    <p>${letterContent.replace(/\n/g, '</p><p>')}</p>
+                    <div class="letter-signature">- Orang yang sangat mencintaimu</div>
+                `;
+                
+                createHearts(15);
+                alert('Surat cinta baru telah dibuat! ❤️');
+            }
+        });
+        
+        // Dedikasikan Lagu
+        const dedicateSongBtn = document.getElementById('dedicate-song-btn');
+        
+        dedicateSongBtn.addEventListener('click', () => {
+            const songTitle = prompt('Judul lagu yang ingin kamu dedikasikan:');
+            if (songTitle) {
+                const songArtist = prompt('Nama artis lagu tersebut:');
+                const dedication = prompt('Pesan khusus untuk lagu ini:');
+                
+                // Tambahkan ke playlist
+                songs.push({
+                    title: songTitle,
+                    artist: songArtist || 'Unknown Artist',
+                    src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3' // Default music
+                });
+                
+                // Reload playlist
+                loadPlaylist();
+                
+                // Mainkan lagu terakhir (yang baru ditambahkan)
+                playSong(songs.length - 1);
+                
+                createHearts(20);
+                alert(`❤️ Terima kasih telah mendedikasikan "${songTitle}" untukku! ❤️\n\nPesan: ${dedication || 'Tidak ada pesan'}`);
+            }
+        });
+        
+        // Kuis Cinta
+        const startQuizBtn = document.getElementById('start-quiz-btn');
+        const quizContainer = document.getElementById('quiz-container');
+        
+        startQuizBtn.addEventListener('click', () => {
+            const questions = [
+                "Kapan pertama kali kita bertemu?",
+                "Apa makanan favoritku?",
+                "Apa warna favoritku?",
+                "Di mana tempat favorit kita untuk kencan?",
+                "Apa lagu 'kita' yang spesial?"
+            ];
+            
+            const answers = [
+                "Kamu pasti ingat tanggal spesial ini!",
+                "Kamu tahu aku suka makanan itu!",
+                "Warna yang selalu membuatku senang!",
+                "Tempat dimana kita selalu bahagia bersama!",
+                "Lagu yang selalu membuat kita bernyanyi bersama!"
+            ];
+            
+            let score = 0;
+            
+            for (let i = 0; i < questions.length; i++) {
+                const userAnswer = prompt(questions[i]);
+                if (userAnswer) {
+                    score += 20;
+                    alert(answers[i]);
+                } else {
+                    alert("Kamu melewatkan pertanyaan ini!");
+                }
+            }
+            
+            quizContainer.innerHTML = `
+                <h3 class="game-title">Hasil Kuis Cinta Kamu</h3>
+                <p>Kamu mendapatkan skor ${score}% dalam kuis cinta kita!</p>
+                <p>${score >= 80 ? "❤️ Kamu benar-benar mengenalku dengan baik! Aku sangat mencintaimu! ❤️" : 
+                  score >= 50 ? "Kamu cukup mengenalku, tapi masih ada yang bisa dipelajari lagi sayang!" : 
+                  "Kamu perlu lebih banyak waktu untuk mengenaliku sayang! Ayo lebih sering menghabiskan waktu bersama!"}</p>
+                <button class="game-btn" id="restart-quiz-btn"><i class="fas fa-redo"></i> Coba Lagi</button>
+            `;
+            
+            document.getElementById('restart-quiz-btn').addEventListener('click', () => {
+                window.location.reload();
+            });
+            
+            createHearts(Math.floor(score / 10));
+        });
+        
+        // Game Cocokkan Jawaban
+        const startMatchGameBtn = document.getElementById('start-match-game-btn');
+        const matchGameQuestions = document.getElementById('match-game-questions');
+        
+        startMatchGameBtn.addEventListener('click', () => {
+            const questions = [
+                "Apa warna favorit pasanganmu?",
+                "Apa makanan yang tidak disukai pasanganmu?",
+                "Di mana tempat pertama kali kalian kencan?",
+                "Apa cita-cita masa kecil pasanganmu?",
+                "Apa film favorit pasanganmu?"
+            ];
+            
+            let matchScore = 0;
+            let userAnswers = [];
+            let partnerAnswers = [];
+            
+            // Dapatkan jawaban pengguna
+            for (let i = 0; i < questions.length; i++) {
+                const answer = prompt(`Pertanyaan ${i+1}: ${questions[i]}`);
+                userAnswers.push(answer || "(Tidak dijawab)");
+            }
+            
+            // Jawaban pasangan (simulasi)
+            partnerAnswers = [
+                "hitam",
+                "keju",
+                "kafe yellow",
+                "Menjadi pilot",
+                "ultraman"
+            ];
+            
+            // Tampilkan hasil
+            matchGameQuestions.innerHTML = '<h4>Perbandingan Jawaban:</h4>';
+            
+            for (let i = 0; i < questions.length; i++) {
+                const isMatch = userAnswers[i].toLowerCase() === partnerAnswers[i].toLowerCase();
+                if (isMatch) matchScore += 20;
+                
+                matchGameQuestions.innerHTML += `
+                    <p><strong>${questions[i]}</strong></p>
+                    <p>Jawaban kamu: ${userAnswers[i]}</p>
+                    <p>Jawaban pasanganmu: ${partnerAnswers[i]}</p>
+                    <p>${isMatch ? '✅ Cocok!' : '❌ Tidak cocok'}</p>
+                    <hr>
+                `;
+            }
+            
+            matchGameQuestions.innerHTML += `
+                <h4>Skor Kecocokan: ${matchScore}%</h4>
+                <p>${matchScore >= 100 ? "❤️ Kalian sangat cocok dan saling mengenal dengan baik!" : 
+                   matchScore >= 50 ? "Kalian cukup saling mengenal, tapi masih ada yang bisa dipelajari!" : 
+                   "Kalian perlu lebih banyak berkomunikasi dan menghabiskan waktu bersama!"}</p>
+                <button class="game-btn" id="restart-match-game-btn"><i class="fas fa-redo"></i> Main Lagi</button>
+            `;
+            
+            document.getElementById('restart-match-game-btn').addEventListener('click', () => {
+                window.location.reload();
+            });
+            
+            createHearts(Math.floor(matchScore / 10));
+        });
+        
+        // Inisialisasi
+        window.onload = function() {
+            createStars();
+            
+            // Buat beberapa hati saat halaman dimuat
+            createHearts(5);
+            
+            // Scroll otomatis galeri setiap 3 detik
+            setInterval(() => {
+                if (document.getElementById('gallery').classList.contains('active')) {
+                    currentSlide = (currentSlide + 1) % gallerySlider.children.length;
+                    gallerySlider.scrollTo({
+                        left: gallerySlider.children[currentSlide].offsetLeft,
+                        behavior: 'smooth'
+                    });
+                    updateGalleryDots();
+                }
+            }, 3000);
+        };
+    </script>
+</body>
+</html>
